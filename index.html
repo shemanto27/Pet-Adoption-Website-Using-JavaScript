@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt Your Pet</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/a78b8a66d3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<main class="container m-auto">
+    <!-- --------------------------------- NavBar Section ------------------------------>
+    <section class="my-5">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+            <a class="btn btn-ghost text-2xl font-bold"><img src="./images/logo.webp" alt="">Peddy</a>
+            </div>
+
+            <div class="space-x-10 navbar-center text-[#13131399]">
+                <a href="">Home</a>
+                <a href="">Shop</a>
+                <a href="">Contact</a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                    <div class="w-10 rounded-full flex justify-center items-center">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    </div>
+                    <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <li>
+                        <a class="justify-between">
+                        Profile
+                        <span class="badge">New</span>
+                        </a>
+                    </li>
+                    <li><a>Settings</a></li>
+                    <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------------------------------- Hero Section ------------------------------->
+    <section>
+        <div class="text-center space-y-8">
+            <p class="text-[#13131399] text-2xl font-bold">Bringing Families Together ❤️‍🔥</p>
+            <p class="text-[#131313] text-7xl font-bold">
+                Your Path to Adoption <br> Starts Here
+            </p>
+            <p class="text-[#131313] text-lg">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+            </p>
+            <button class="btn bg-[#0E7A81] text-white"><a href="#adaptSection">View More</a></button>
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="./images/pet.webp" alt="">
+        </div>
+    </section>
+
+    <!---------------------------------------- Adopt Section --------------------------->
+    <section class="flex justify-center items-center flex-col text-center" id="adaptSection">
+        <!-- writings sections -->
+        <div class="space-y-5">
+            <p class="text-[#131313] text-3xl font-bold">Adopt  Your  Best Friend</p>
+            <p class="text-[#13131399]">It is a long established fact that a reader will be distracted by the readable content of a <br> page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+        </div>
+    </section>
+    
+    <section class="flex justify-center items-center my-5">
+        <!-- Button Section -->
+        <div id="allCategories" class="flex justify-center items-center gap-10 flex-wrap">
+            <!-- <button class="btn w-36 rounded-full"><img src="" alt="">Dogs</button>
+            <button class="btn">Cats</button>
+            <button class="btn">Rabbits</button>
+            <button class="btn">Birds</button> -->
+        </div>
+    </section>
+
+    <!--------------------------------------- Cards Section ---------------------------->
+    <section>
+        <div class="flex justify-between"><p class="text-lg font-bold">Best Deal For you</p> <button class="btn bg-[#0E7A81] text-white" id="sortBtn">Sort By Price</button></div>
+
+        <!-------------------------------cards container ----------------------->
+
+        <div class="flex justify-between flex-wrap my-5 gap-5">
+            <div class="flex justify-center items-center w-full h-full"><span class="loading loading-bars loading-lg hidden z-50 loadSpinner" id=""></span></div>
+            <div id="cardContainer" class="grid grid-cols-1 gap-4 my-5">
+
+                <!-- No Available Data Card -->
+                <!-- <div class="card bg-base-100 w-full shadow-xl border text-center"> -->
+                    <!-- <figure class="p-5"><img class="w-28" src="/images/error.webp" alt=""></figure>
+                    <h3 class="text-[#131313] text-2xl font-bold">No Information Available</h3>
+                    <div class="p-10">
+                        <p class="text-[#131313B3] text-sm">It is a long established fact that a reader will be distracted by the readable content of a page when looking at 
+                            its layout. The point of using Lorem Ipsum is that it has a.</p>
+                    </div> -->
+                <!-- </div> -->
+                
+                <!-- card-1
+                <div class="card bg-base-100 w-72 shadow-xl border">
+                        <figure class="px-5 pt-5">
+                            <img
+                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes"
+                            class="rounded-xl" />
+                        </figure>
+                        <div class="card-body flex ">
+                            <h2 class="card-title">${name}</h2>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-dice-d6"></i><p> Breed: ${breed}</p></div>
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-calendar-days"></i><p> Birth: ${birth}</p></div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-transgender"></i><p> Gender: ${Female}</p></div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-dollar-sign"></i><p> Price: ${Price}</p></div>
+                        </div>
+                            <div class="flex justify-center"><hr class="w-3/4"></div>
+                            <div class="space-x-5 flex justify-center my-5"><button class="btn"><i class="fa-regular fa-thumbs-up"></i></button><button class="btn">Adopt</button><button class="btn">Details</button></div>
+                        
+                </div>
+                card-2
+                <div class="card bg-base-100 w-72 shadow-xl">
+                    <figure class="px-5 pt-5">
+                        <img
+                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                        alt="Shoes"
+                        class="rounded-xl" />
+                    </figure>
+                    <div class="card-body flex ">
+                        <h2 class="card-title">${name}</h2>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-dice-d6"></i><p> Breed: ${breed}</p></div>
+                        <div class="flex items-center gap-2"><i class="fa-regular fa-calendar-days"></i><p> Birth: ${birth}</p></div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-transgender"></i><p> Gender: ${Female}</p></div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-dollar-sign"></i><p> Price: ${Price}</p></div>
+                    </div>
+                        <div class="flex justify-center"><hr class="w-3/4"></div>
+                        <div class="space-x-5 flex justify-center my-5"><button class="btn"><i class="fa-regular fa-thumbs-up"></i></button><button class="btn">Adopt</button><button class="btn">Details</button></div>
+                    
+                </div>
+                card-3
+                <div class="card bg-base-100 w-72 shadow-xl">
+                    <figure class="px-5 pt-5">
+                        <img
+                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                        alt="Shoes"
+                        class="rounded-xl" />
+                    </figure>
+                    <div class="card-body flex ">
+                        <h2 class="card-title">${name}</h2>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-dice-d6"></i><p> Breed: ${breed}</p></div>
+                        <div class="flex items-center gap-2"><i class="fa-regular fa-calendar-days"></i><p> Birth: ${birth}</p></div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-transgender"></i><p> Gender: ${Female}</p></div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-dollar-sign"></i><p> Price: ${Price}</p></div>
+                    </div>
+                        <div class="flex justify-center"><hr class="w-3/4"></div>
+                        <div class="space-x-5 flex justify-center my-5"><button class="btn"><i class="fa-regular fa-thumbs-up"></i></button><button class="btn">Adopt</button><button class="btn">Details</button></div>
+                    
+                </div> -->
+            </div>
+    
+            <!-- ----------------------------Right Side Bar ------------------------->
+            <div id="rightBar" class="card bg-base-100 shadow-xl min-h-[420px] max-h-[840px] w-[300px] border mt-5 grid grid-cols-2">
+
+            </div>
+        </div>
+    </section>
+
+    <!-------------------------------Modal Section -------------------------->
+
+<dialog id="my_modal_1" class="modal">
+    <!-- <div class="modal-box">
+        
+        <figure class="px-5 pt-5">
+            <img
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            alt="Shoes"
+            class="rounded-xl" />
+        </figure>
+        <div class="card-body flex ">
+            <h2 class="card-title">${name}</h2>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-dice-d6"></i><p> Breed: ${breed}</p></div>
+            <div class="flex items-center gap-2"><i class="fa-regular fa-calendar-days"></i><p> Birth: ${birth}</p></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-transgender"></i><p> Gender: ${Female}</p></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-dollar-sign"></i><p> Price: ${Price}</p></div>
+        </div>
+            <div class="flex justify-center"><hr class="w-3/4"></div>
+        <h1>Details Information</h1>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+            The point of using is that it has a more-or-less normal distribution of letters, as opposed to using.</p>
+
+        <div class="modal-action">
+            <form method="dialog">
+            
+            <button class="btn w-full">Cancel</button>
+            </form>
+        </div>
+    </div> -->
+</dialog>
+</main>
+
+<!-- Footer Section -->
+
+<footer class="footer bg-[#131313] text-neutral-content p-10 flex justify-around">
+    <nav><a class="btn btn-ghost text-2xl font-bold"><img src="./images/logo.webp" alt="">Peddy</a>
+        <p>Location: av. Washington 165, NY CA 54003</p>
+        <p>Phone: +31 85 964 47 25</p>
+        <p>Email: info@yourdomain.com</p>
+        <p>Openings hours: 9.00 AM - 5.00 PM</p>
+        
+        <div>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+        </div>
+    </nav>
+    <nav>
+        <h6 class="text-white text-lg font-bold">Useful Links</h6>
+        <a class="link link-hover text-[#FFFFFF99]">Home</a>
+        <a class="link link-hover text-[#FFFFFF99]">About Us</a>
+        <a class="link link-hover text-[#FFFFFF99]">Animals</a>
+        <a class="link link-hover text-[#FFFFFF99]">Contact</a>
+    </nav>
+    <nav>
+        <h6 class="text-white text-lg font-bold">Drop a Message</h6>
+        <input type="text" placeholder="Enter your email" class="w-full rounded-xl h-12 bg-[#FFFFFF0D] text-center">
+        <button class="btn bg-[#0E7A81] text-white w-full border-none">Subscribe</button>
+    </nav>
+</footer>
+
+
+<script src="/pet.js"></script>
+</body>
+</html>
